@@ -9,6 +9,13 @@ export const theme = {
     fontSizes: {
         small: 13,
         normal: 15,
-        big: 20
+        big: 20,
+        super_big: 30
+    },
+    fontWeight: {
+        normal: "500",
+        bold: "700",
+        thin: "200",
+        ultra_bold: "900"
     }
 }

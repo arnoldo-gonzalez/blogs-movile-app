@@ -4,10 +4,12 @@ import "react-native-gesture-handler";
 import { Entypo } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
+import { StatusBar } from "react-native";
 
 import Home from "./src/pages/Home.jsx";
 import About from "./src/pages/About.jsx";
 import Posts from "./src/pages/Posts.jsx";
+import Contact from "./src/pages/Contact.jsx";
 import { theme } from "./src/theme.js";
 
 const Drawer = createDrawerNavigator();
@@ -28,21 +30,26 @@ export default function App() {
             },
             drawerActiveTintColor: "#fff",
             drawerActiveBackgroundColor: theme.colors.secondary,
-            drawerInactiveTintColor: "#fff"
+            drawerInactiveTintColor: "#fff",
         }}>
             <Drawer.Screen name="Home" component={Home} options={{ 
                 drawerLabel: 'Home',
                 drawerIcon: (props) => (<Entypo name="home" size={props.size} color={props.color} />)
             }}/>
+            <Drawer.Screen name="About" component={About} options={{ 
+                drawerLabel: 'About',
+                drawerIcon: (props) => (<FontAwesome6 name="people-roof" size={props.size - 4} color={props.color} />)
+            }} />
             <Drawer.Screen name="Post" component={Posts} options={{ 
                 drawerLabel: 'Posts',
                 drawerIcon: (props) => (<MaterialIcons name="article" size={props.size} color={props.color} />)
             }} />
-            <Drawer.Screen name="About" component={About} options={{ 
-                drawerLabel: 'About',
-                drawerIcon: (props) => (<FontAwesome6 name="people-roof" size={props.size - 1} color={props.color} />)
+            <Drawer.Screen name="Contact" component={Contact} options={{ 
+                drawerLabel: 'Contact',
+                drawerIcon: (props) => (<MaterialIcons name="contacts" size={props.size} color={props.color} />)
             }} />
         </Drawer.Navigator>
+        <StatusBar barStyle="light-content" backgroundColor={theme.colors.primary} />
     </NavigationContainer>
   );
 }

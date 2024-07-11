@@ -5,6 +5,7 @@ export const theme = {
         terciary: "#806491",
         darkBlue: "#02315E",
         middiumBlue: "#00457E",
+        gray: "rgb(105, 105, 105)"
     },
     fontSizes: {
         small: 13,

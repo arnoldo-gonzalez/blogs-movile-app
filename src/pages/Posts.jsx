@@ -1,11 +1,22 @@
 import React from "react";
-import { View, Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { theme } from "../theme.js";
+import Footer from "../components/Footer.jsx";
+import PostsList from "../components/PostsList.jsx";
 
 export default function Posts() {
     return (
-    <View>
-        <Text>Hola POSTTSTSTSTSTTS</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+        <PostsList />
+        <Footer />
+    </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "#000", 
+        alignItems: "center", 
+        gap: 20
+    }
+})

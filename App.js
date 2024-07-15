@@ -18,6 +18,7 @@ export default function App() {
   return (
     <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home" screenOptions={{
+            headerLargeTitle: true,
             headerTintColor: '#fff',
             headerStyle: {
                 backgroundColor: theme.colors.primary,

@@ -21,7 +21,7 @@ export default function Loader({marginTop}) {
             });
         };
         startAnimation();
-    })
+    }, []);
 
     return (
     <View style={{

@@ -13,7 +13,7 @@ export default function PostsList({navigation}) {
         setReloading(true);
         console.log("hola")
         reload();
-      };
+    };
 
     return (
         <ScrollView 
